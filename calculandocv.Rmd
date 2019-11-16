@@ -1,0 +1,156 @@
+---
+title: "Calculando CV"
+author: ""
+date: ""
+output: html_document
+
+---
+ 
+ 
+### Por que Calcular o Coeficiente de Variação?
+ 
+Explicacão do Prof Vítor Menezes: Sua função é permitir a comparação das dispersões observadas em conjuntos com médias diferentes. Como exemplo, considere que as vendas diárias de um vendedor ambulante se comportem como uma variável aleatória com a seguinte distribuição de probabilidades:
+
+
+  x  | p(x)
+:-----:|:-----:
+8    | 0,2
+9    | 0,2
+10   | 0,2
+11   | 0,2
+12   | 0,2
+
+
+
+
+
+E que as vendas diárias de uma grande empresa se comportem como uma variável aleatória com a seguinte distribuição de probabilidades:
+
+  y  | p(y)
+:-----:|:-----:
+999.998   | 0,2
+999.999   | 0,2
+1.000.000   | 0,2
+1.000.001   | 0,2
+1.000.002   | 0,2
+
+
+
+É correto dizer que ambas apresentam mesma dispersão?
+A variância é uma medida de dispersão absoluta. Para ela, interessam apenas os valores absolutos dos quadrados dos desvios. Apenas isso.
+
+Já no coeficiente de variação nós temos uma referência quanto à grandeza relativa dos desvios. Um desvio de R 1,00 num conjunto em que a média é de R 10,00 é um desvio de 10%. É um desvio relativamente grande. O desvio de 1,00 num conjunto em que a média é de R$ 1.000.000,00 é irrisório, desprezível.
+O coeficiente de variação nos diz que, tomando a média como denominador, as vendas da grande empresa são mais concentradas.
+
+
+### Importando os dados:
+
+
+```{r, message=FALSE, warning=FALSE}
+
+library(BatchGetSymbols) # Pacote que importara os dados das cotações
+library(tidyverse) # pacote que resumirá os dados
+library(lubridate) #pacote para manipulacao de datas
+
+```
+
+
+
+```{r, cache=TRUE, message=FALSE, warning=FALSE, results='hide'}
+
+my.tickers <- read.csv("empresas.txt", header = TRUE)
+my.tickers <- as.character(my.tickers[,1])
+
+l.out <- BatchGetSymbols(tickers = my.tickers,
+                         first.date = Sys.Date()-720,
+                         last.date = Sys.Date())
+
+base_dados <- l.out$df.tickers
+attach(base_dados)
+
+coefivaria <- base_dados %>% 
+  group_by( month(ref.date), ticker) %>% 
+  summarise( retorno = mean(diff(log(price.adjusted)), na.rm = TRUE),
+             desvio =  sd(diff(log(price.adjusted)), na.rm = TRUE),
+             cv = desvio/retorno )
+
+
+
+```
+
+
+### Criando tabela:
+
+
+```{r,message=FALSE, warning=FALSE}
+library(DT) #pacote para visualizacao da tabela
+
+```
+
+
+
+```{r}
+
+DT::datatable(coefivaria)
+
+```
+
+
+
+### Criando gráficos:
+
+
+```{r, cache=TRUE, message=FALSE, warning=FALSE}
+library(plotly) #pacote para visualizacao do grafico
+
+p <- coefivaria %>%
+  plot_ly(
+    type = 'scatter', 
+    x = ~`month(ref.date)`, 
+    y = ~cv,
+    text = ~ticker,
+    hoverinfo = 'ticker',
+    mode = 'markers', 
+    transforms = list(
+      list(
+        type = 'filter',
+        target = ~ticker,
+        operation = '=',
+        value = unique(coefivaria$ticker)[1]
+      )
+    )) %>% layout(
+      updatemenus = list(
+        list(
+          type = 'dropdown',
+          active = 0,
+          buttons = list(  #modificar a redundacia que vem abaixo
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$ticker)[1]),
+                 label = unique(coefivaria$ticker)[1]),
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$ticker)[2]),
+                 label = unique(coefivaria$ticker)[2]),
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$ticker)[3]),
+                 label = unique(coefivaria$ticker)[3]),
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$ticker)[4]),
+                 label = unique(coefivaria$ticker)[4])
+          )
+        )
+      )
+    )
+
+p
+
+```
+
+
+
+
+```{r,cache=TRUE, message=FALSE, warning=FALSE}
+ggplot(coefivaria)+
+  geom_line(aes(x=coefivaria$`month(ref.date)`, y=coefivaria$cv, color=coefivaria$ticker))
+```
+
+ 

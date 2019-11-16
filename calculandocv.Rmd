@@ -42,6 +42,22 @@ A variância é uma medida de dispersão absoluta. Para ela, interessam apenas o
 Já no coeficiente de variação nós temos uma referência quanto à grandeza relativa dos desvios. Um desvio de R 1,00 num conjunto em que a média é de R 10,00 é um desvio de 10%. É um desvio relativamente grande. O desvio de 1,00 num conjunto em que a média é de R$ 1.000.000,00 é irrisório, desprezível.
 O coeficiente de variação nos diz que, tomando a média como denominador, as vendas da grande empresa são mais concentradas.
 
+### listando todos os tickers de empresas da B3
+
+```{r}
+library(GetDFPData)
+empresas <- gdfpd.get.info.companies(type.data = "companies")
+
+
+ticker <- as.character(empresas$tickers)
+ticker <- ticker[-is.na(ticker)]
+ticker <- paste0(ticker, ".SA") 
+
+
+```
+
+
+
 
 ### Importando os dados:
 
@@ -58,10 +74,7 @@ library(lubridate) #pacote para manipulacao de datas
 
 ```{r, cache=TRUE, message=FALSE, warning=FALSE, results='hide'}
 
-my.tickers <- read.csv("empresas.txt", header = TRUE)
-my.tickers <- as.character(my.tickers[,1])
-
-l.out <- BatchGetSymbols(tickers = my.tickers,
+l.out <- BatchGetSymbols(tickers = ticker,
                          first.date = Sys.Date()-720,
                          last.date = Sys.Date())
 
@@ -69,7 +82,7 @@ base_dados <- l.out$df.tickers
 attach(base_dados)
 
 coefivaria <- base_dados %>% 
-  group_by( month(ref.date), ticker) %>% 
+  group_by( ~month(ref.date), ~ticker) %>% 
   summarise( retorno = mean(diff(log(price.adjusted)), na.rm = TRUE),
              desvio =  sd(diff(log(price.adjusted)), na.rm = TRUE),
              cv = desvio/retorno )
@@ -147,7 +160,9 @@ p
 
 
 
+### Grafico de linhas
 
+Nesse grafico a ideia era apresentar varias linhas, cada linha com um ticker. Mas são tantos tickers, mais 2000, que fica impossivel enchegar alguma coisa. Vamos tentar outro tipo de gráfico.
 ```{r,cache=TRUE, message=FALSE, warning=FALSE}
 ggplot(coefivaria)+
   geom_line(aes(x=coefivaria$`month(ref.date)`, y=coefivaria$cv, color=coefivaria$ticker))

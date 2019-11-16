@@ -1,0 +1,17 @@
+base
+xml2
+rvest
+dplyr
+BatchGetSymbols
+tidyverse
+ggplot2
+tibble
+tidyr
+readr
+purrr
+stringr
+forcats
+lubridate
+DT
+plotly
+GetDFPData

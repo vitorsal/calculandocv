@@ -1,5 +1,0 @@
-empresas
-AGRO3.SA
-BAUH3.SA
-BEEF3.SA
-BRFS3.SA

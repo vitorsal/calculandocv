@@ -6,34 +6,137 @@ output: html_document
 
 ---
  
+
+## Introdução
+
+
+Este Boletim foi elaborado com base em estudos internos e utilizando dados e análises
+produzidos pelo QAleph Finance, conhecimento público com informações atualizadas até 22 de
+Julho de 2019. O Boletim é direcionado para estudantes, clientes e investidores profissionais,
+não podendo o QAleph Finance, ser responsabilizado por qualquer perda direta ou indiretamente
+derivada do seu uso ou do seu conteúdo. Não pode ser reproduzido, distribuído ou publicado por
+qualquer pessoa, para quaisquer fins.
+
+
+## Do Cenário Econômico
+
+
+- Taxa de juros e selic;
+- Crédito;
+- Nível de confianca do Brasil (procurar indicador que mede esse nível);
+- Inserir gráficos com projecoes (taxa de juros esperados ou inflacao)
+- Comentar sobre o cenário político (reforma da previdencia, trabalhista...)
+
+
+Nos últimos meses do ano de 2010, o Brasil vem adotando uma política monetária
+contracionista, ou seja, vem reduzindo a liquidez da economia, conforme verificado pela
+manutenção de uma alta taxa de juros, pelo aumento da dívida pública federal e pelo aumento do
+compulsório para depósitos à vista.
+
+A adoção de uma política monetária contracionista é um dos fatores que podem
+explicar a valorização do real frente ao dólar nos últimos meses do ano de 2010, que vem
+tentando ser contida pela realização de leilões de compra de dólares pelo Banco Central do
+Brasil.
+
+Com relação à política fiscal, cabe atentar que o crescimento verificado na dívida
+pública federal, interna e externa, se procedeu em um momento de desvalorização do dólar, o que
+distorceu os valores da dívida interna.
+
+Por fim, cabe destacar que a manutenção de uma baixa taxa de juros (00,00% a.a.)
+para controlar a liquidez da economia acaba tornando atraentes os títulos de renda variável e a
+valorização do dólar frente ao real acaba impactando de forma positiva nas exportações
+brasileiras, aumentando seus valores em termos da moeda nacional, o real.
+
+
+
+### Análise setorial
+
+
+
+A seguir, são apresentadas breves perspectivas sobre os setores econômicos com o
+intuito de selecionar os 10 melhores ativos para formar o portfólio. Essas perspectivas têm como
+horizonte de análise o ano de 2019.
+
+Os dados foram obtidos de informações disponíveis ao público em geral nos grandes
+meios de comunicação, sem a aplicação de qualquer procedimento técnico. Desses ativos, 10
+serão escolhidas para formar um portfólio inicial. Tais ações foram escolhidas por meio da
+análise do preço ajustado, dos desvios padrão e do coeficiente de variação (CV). O cv foi a
+principal métrica para análise e seleção dos ativos, uma vez que, fornece a variação dos dados
+
+(preços ajustados diários) em relação a média. Logo, quanto menor o cv mais homogêneos serão
+os dados. Fica subentendido que as ações escolhidas foram aquelas que apresentaram o menor cv
+do conjunto de ativos do setor em análise. histórico no faturamento das mineradoras, incluindo as
+brasileiras. Além disso, a alta demanda por minério de ferro por parte da China tem impulsionado
+para cima o seu preço, apesar de tentativas de resistência ao aumento de preço por parte das
+siderúrgicas chinesas.
+
+
+### Mineração
+
+
+Em cada setor escolher os melhores ativos em termos de CV;
+Regra 1: De cada setor deve ser extraído 2 ativos;
+Regra 2: O somatório de todos os ativos deve ser igual a 10.
+
+Tanto a USIMINAS quanto a CSN tem interesse na criação de uma unidade
+autônoma de mineração em 2010. Dados do primeiro semestre de 2010 mostram um recorde
+
+
+### Petróleo
+
+
+Prevê-se aumento da demanda por petróleo em 2010 e também em 2011, o que
+pressionará seu preço para cima, além de grandes expectativas para com o Pré-sal, a ser
+explorado pela Petrobrás. Observa-se especial preocupação com o preço do petróleo em Nova
+Iorque e Londres e sensibilidade de seu preço ao comportamento da moeda americana, dos
+estoques de petróleo e dos indicadores econômicos dos EUA.
+
+
+### Siderurgia
+
+
+As perspectivas para os papéis de siderúrgicas brasileiras não são boas por causa das
+dificuldades enfrentadas por elas, como a demanda menor que a esperada, a queda do dólar e o
+aumento da concorrência com siderúrgicas estrangeiras. Essas perspectivas mantêm-se mesmo
+com as medidas do Governo para reduzir a importação de aço e, com isso, fortalecer as
+siderúrgicas nacionais.
+
+
+### Instituições Financeiras
+
+
+
+Os bancos brasileiros apresentaram lucros recordes em um ano de crise econômica
+(2009). Além disso, vários analistas atribuíram perspectiva positiva para o setor bancário
+brasileiro em 2010. Além disso, as ações dos bancos brasileiros foram destaque no 3º trimestre do
+ano de 2010.
+
+
+### Comércio Varejista
+
+
+
+As vendas do varejo brasileiro cresceram em vários meses do ano de 2010 de forma
+
+discreta, excluindo-se as sazonalidades, segundo o IBGE.
+
+
+
+
+## Do Portfólio
+
+
+
+###  Do Portfólio Final
+
  
-### Por que Calcular o Coeficiente de Variação?
+#### Por que Calcular o Coeficiente de Variação?
+
  
-Explicacão do Prof Vítor Menezes: Sua função é permitir a comparação das dispersões observadas em conjuntos com médias diferentes. Como exemplo, considere que as vendas diárias de um vendedor ambulante se comportem como uma variável aleatória com a seguinte distribuição de probabilidades:
+Uma boa explicacão é o exemplo do Prof Vítor Menezes: O coeficiente de variação permite a comparação das dispersões observadas em conjuntos com médias diferentes. Como exemplo, considere que as vendas diárias de um vendedor ambulante se comportem como uma variável aleatória com a seguinte distribuição de probabilidades: X = 8,9,10,11,12; p(X) = 0,2 para todos valores.
 
 
-  x  | p(x)
-:-----:|:-----:
-8    | 0,2
-9    | 0,2
-10   | 0,2
-11   | 0,2
-12   | 0,2
-
-
-
-
-
-E que as vendas diárias de uma grande empresa se comportem como uma variável aleatória com a seguinte distribuição de probabilidades:
-
-  y  | p(y)
-:-----:|:-----:
-999.998   | 0,2
-999.999   | 0,2
-1.000.000   | 0,2
-1.000.001   | 0,2
-1.000.002   | 0,2
-
+E que as vendas diárias de uma grande empresa se comportem como uma variável aleatória com a seguinte distribuição de probabilidades: Y = 999.998,999.999 , 1.000.000, 1.000.001 , 1.000.002; p(Y) = 0,2 para todos valores.
 
 
 É correto dizer que ambas apresentam mesma dispersão?
@@ -42,9 +145,14 @@ A variância é uma medida de dispersão absoluta. Para ela, interessam apenas o
 Já no coeficiente de variação nós temos uma referência quanto à grandeza relativa dos desvios. Um desvio de R 1,00 num conjunto em que a média é de R 10,00 é um desvio de 10%. É um desvio relativamente grande. O desvio de 1,00 num conjunto em que a média é de R$ 1.000.000,00 é irrisório, desprezível.
 O coeficiente de variação nos diz que, tomando a média como denominador, as vendas da grande empresa são mais concentradas.
 
+
+
+
+
+```{r,cache=TRUE, message=FALSE, warning=FALSE, echo=FALSE}
+
 ### listando todos os tickers de empresas da B3
 
-```{r}
 library(GetDFPData)
 empresas <- gdfpd.get.info.companies(type.data = "companies")
 
@@ -59,10 +167,11 @@ ticker <- paste0(ticker, ".SA")
 
 
 
+
+
+
+```{r, message=FALSE, warning=FALSE,echo=FALSE}
 ### Importando os dados:
-
-
-```{r, message=FALSE, warning=FALSE}
 
 library(BatchGetSymbols) # Pacote que importara os dados das cotações
 library(tidyverse) # pacote que resumirá os dados
@@ -72,64 +181,106 @@ library(lubridate) #pacote para manipulacao de datas
 
 
 
-```{r, cache=TRUE, message=FALSE, warning=FALSE, results='hide'}
+```{r, cache=TRUE, message=FALSE, warning=FALSE, results='hide', echo=FALSE}
 
 l.out <- BatchGetSymbols(tickers = ticker,
-                         first.date = Sys.Date()-720,
+                         first.date = Sys.Date()-360,
                          last.date = Sys.Date())
-
-base_dados <- l.out$df.tickers
-attach(base_dados)
-
-coefivaria <- base_dados %>% 
-  group_by( ~month(ref.date), ~ticker) %>% 
-  summarise( retorno = mean(diff(log(price.adjusted)), na.rm = TRUE),
-             desvio =  sd(diff(log(price.adjusted)), na.rm = TRUE),
-             cv = desvio/retorno )
-
-
 
 ```
 
 
+
+```{r, cache=TRUE, message=FALSE, warning=FALSE, results='hide', echo=FALSE}
+base_dados <- l.out$df.tickers
+attach(base_dados)
+
+
+# Objeto para criar os graficos
+coefivaria <- base_dados %>% 
+  group_by(   month(ref.date), base_dados$ticker) %>% 
+  summarise( retorno = mean(diff(log(price.adjusted)), na.rm = TRUE),
+             desvio =  sd(diff(log(price.adjusted)), na.rm = TRUE),
+             cv = desvio/retorno )
+
+coefivaria$retorno <- round(coefivaria$retorno, digits = 3)
+coefivaria$desvio <- round(coefivaria$desvio, digits = 3)
+coefivaria$cv <- round(coefivaria$cv, digits = 3)
+
+names(coefivaria) <- c( "mes", "ticker", "retorno", "desvio", "cv")
+coefivaria$ticker <- str_sub(coefivaria$ticker, end = 5)
+
+companies <- empresas[,c("name.company", "main.sector", "tickers")]
+names(companies) <- c("empresa", "setor" , "ticker")
+
+coefivaria <- left_join(coefivaria, companies, by = "ticker")
+
+
+
+
+
+#Objeto para criar a tabela
+tabela_coefivaria <- base_dados %>% 
+  group_by( base_dados$ticker) %>% 
+  summarise( retorno = mean(diff(log(price.adjusted)), na.rm = TRUE),
+             desvio =  sd(diff(log(price.adjusted)), na.rm = TRUE),
+             cv = desvio/retorno )
+
+tabela_coefivaria$retorno <- round(tabela_coefivaria$retorno, digits = 3)
+tabela_coefivaria$desvio <- round(tabela_coefivaria$desvio, digits = 3)
+tabela_coefivaria$cv <- round(tabela_coefivaria$cv, digits = 3)
+
+names(tabela_coefivaria) <- c( "ticker", "retorno", "desvio", "cv")
+tabela_coefivaria$ticker <- str_sub(tabela_coefivaria$ticker, end = 5)
+
+companies <- empresas[,c("name.company", "main.sector", "tickers")]
+names(companies) <- c("empresa", "setor" , "ticker")
+
+tabela_coefivaria <- left_join(tabela_coefivaria, companies, by = "ticker")
+
+tabela_coefivaria$empresa <- str_sub(tabela_coefivaria$empresa , end = 26)
+  
+```
+
+
+
+
+
+```{r,message=FALSE, warning=FALSE, echo=FALSE}
 ### Criando tabela:
-
-
-```{r,message=FALSE, warning=FALSE}
 library(DT) #pacote para visualizacao da tabela
 
 ```
 
 
 
-```{r}
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
 
-DT::datatable(coefivaria)
+DT::datatable(tabela_coefivaria[,c(5,2,3,4,6)], colnames = c("Empresa", "Retorno", "Risco", "Coeficiente de Variação", "Setor") )
 
 ```
 
 
 
+```{r, cache=TRUE, message=FALSE, warning=FALSE,echo=FALSE}
 ### Criando gráficos:
 
-
-```{r, cache=TRUE, message=FALSE, warning=FALSE}
 library(plotly) #pacote para visualizacao do grafico
 
 p <- coefivaria %>%
   plot_ly(
     type = 'scatter', 
-    x = ~`month(ref.date)`, 
-    y = ~cv,
-    text = ~ticker,
-    hoverinfo = 'ticker',
+    x = coefivaria$mes , 
+    y = coefivaria$cv ,
+    text = coefivaria$setor ,
+    hoverinfo = 'setor',
     mode = 'markers', 
     transforms = list(
       list(
         type = 'filter',
-        target = ~ticker,
+        target = coefivaria$setor,
         operation = '=',
-        value = unique(coefivaria$ticker)[1]
+        value = unique(coefivaria$setor)[1]
       )
     )) %>% layout(
       updatemenus = list(
@@ -138,34 +289,73 @@ p <- coefivaria %>%
           active = 0,
           buttons = list(  #modificar a redundacia que vem abaixo
             list(method = "restyle",
-                 args = list("transforms[0].value", unique(coefivaria$ticker)[1]),
-                 label = unique(coefivaria$ticker)[1]),
+                 args = list("transforms[0].value", unique(coefivaria$setor)[1]),
+                 label = unique(coefivaria$setor)[1]),
             list(method = "restyle",
-                 args = list("transforms[0].value", unique(coefivaria$ticker)[2]),
-                 label = unique(coefivaria$ticker)[2]),
+                 args = list("transforms[0].value", unique(coefivaria$setor)[2]),
+                 label = unique(coefivaria$setor)[2]),
             list(method = "restyle",
-                 args = list("transforms[0].value", unique(coefivaria$ticker)[3]),
-                 label = unique(coefivaria$ticker)[3]),
+                 args = list("transforms[0].value", unique(coefivaria$setor)[3]),
+                 label = unique(coefivaria$setor)[3]),
             list(method = "restyle",
-                 args = list("transforms[0].value", unique(coefivaria$ticker)[4]),
-                 label = unique(coefivaria$ticker)[4])
+                 args = list("transforms[0].value", unique(coefivaria$setor)[4]),
+                 label = unique(coefivaria$setor)[4]),
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$setor)[5]),
+                 label = unique(coefivaria$setor)[5]),
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$setor)[6]),
+                 label = unique(coefivaria$setor)[6]),
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$setor)[7]),
+                 label = unique(coefivaria$setor)[7]),
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$setor)[8]),
+                 label = unique(coefivaria$setor)[8]),
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$setor)[9]),
+                 label = unique(coefivaria$setor)[9]),
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$setor)[10]),
+                 label = unique(coefivaria$setor)[10]),
+            list(method = "restyle",
+                 args = list("transforms[0].value", unique(coefivaria$setor)[11]),
+                 label = unique(coefivaria$setor)[11])
           )
         )
       )
     )
 
+
+
+trace1 <- list(
+  uid = "ea8d4eba-c760-11e8-93e8-f8a96365fab3", 
+  line = list(width = 5), 
+  name = "List object", 
+  type = "scatter", 
+  x = c(1, 2, 3, 4, 5, 6, 7, 8, 9), 
+  y = c(1, 4, 5, 6, 7, 8, 10, 4, 5)
+)
+trace2 <- list(
+  uid = "ea8d4ebb-c760-11e8-a2af-f8a96365fab3", 
+  line = list(width = 5), 
+  name = "List object 2", 
+  type = "scatter", 
+  x = c(1, 2, 3, 4, 5, 6, 7, 8, 9), 
+  y = c(2, 4, 6, 5, 7, 8, 9, 4, 3)
+)
+data <- list(trace1, trace2)
+layout <- list(
+  title = "Testando o grafico de linhas pacote plotly", 
+  xaxis = list(title = "X-axis"), 
+  yaxis = list(title = "y-axis")
+)
+p <- plot_ly()
+p <- add_trace(p, uid=trace1$uid, line=trace1$line, name=trace1$name, type=trace1$type, x=trace1$x, y=trace1$y)
+p <- add_trace(p, uid=trace2$uid, line=trace2$line, name=trace2$name, type=trace2$type, x=trace2$x, y=trace2$y)
+p <- layout(p, title=layout$title, xaxis=layout$xaxis, yaxis=layout$yaxis)
 p
 
 ```
 
 
-
-### Grafico de linhas
-
-Nesse grafico a ideia era apresentar varias linhas, cada linha com um ticker. Mas são tantos tickers, mais 2000, que fica impossivel enchegar alguma coisa. Vamos tentar outro tipo de gráfico.
-```{r,cache=TRUE, message=FALSE, warning=FALSE}
-ggplot(coefivaria)+
-  geom_line(aes(x=coefivaria$`month(ref.date)`, y=coefivaria$cv, color=coefivaria$ticker))
-```
-
- 
